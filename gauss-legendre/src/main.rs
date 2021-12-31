@@ -10,9 +10,11 @@ fn main() {
 }
 
 fn iterate(a: f64, b: f64, t: f64, p: f64, pi: f64) {
+    // calculate the arithetic-geometric mean of the (inital) two inputs a, b
     let a_n = (a + b) / 2.0;
     let b_n: f64 = a * b;
     let b_n = b_n.sqrt();
+
     let t_n = t - p * (a - a_n).powf(2.0);
     let p_n = 2.0 * p;
     let pi_n = ((a_n + b_n).powf(2.0)) / (4.0 * t_n);
